@@ -15,6 +15,7 @@ export class AllRepo {
 
     static Ctor(): void {
         this.navWindow = new NavWindow();
+        this.siteWindow = new SiteWindow();
     }
 
 }
