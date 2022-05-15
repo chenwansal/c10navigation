@@ -4,7 +4,8 @@
 ```
 // ==== 安装依赖 ====
 // 0. 运行环境
-nodejs 14.0.0
+nodejs 14.x.x
+npm 6.x.x
 
 // 1. 安装全局依赖
 npm i -g typescript
