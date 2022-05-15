@@ -1,0 +1,15 @@
+{
+  "name": "navwebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node ./dst/main_navwebsite.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jackwebutil": "^1.5.0"
+  }
+}
