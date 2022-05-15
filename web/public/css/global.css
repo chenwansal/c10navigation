@@ -1,0 +1,56 @@
+* {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+i {
+    font-style: normal;
+}
+
+.title1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+.title2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.title3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.title4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.title5 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Common UI */
+.section-title {
+    width: 100%;
+    margin: 10px 0;
+    border-bottom: 2px solid #333;
+}
+
+.section-title > i {
+    position: absolute;
+    margin-top: -12px;
+    margin-left: 20px;
+    background-color: #fff;
+}

@@ -1,11 +1,11 @@
 {
-  "name": "navwebsite",
+  "name": "c10_navigation_server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dst/Main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc && node ./dst/main_navwebsite.js"
+    "start": "tsc && node ./dst/Main.js"
   },
   "author": "",
   "license": "ISC",
