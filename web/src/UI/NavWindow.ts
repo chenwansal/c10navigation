@@ -39,8 +39,9 @@ export class NavWindow {
 
         let logo: HTMLDivElement = document.createElement("div");
         logo.id = "logo";
-        logo.className += "title1";
+        logo.className += "title3";
         logo.innerHTML = `<a href=${url}>C10 导航</a>`;
+        logo.title = "收录C10爱逛的网站和一些工具";
 
         return logo;
 
@@ -49,8 +50,7 @@ export class NavWindow {
     private AddNavItem(url: string, text: string): HTMLDivElement {
 
         let item: HTMLDivElement = document.createElement("div");
-        item.className += "title4";
-        item.innerHTML = `<a href=${url}>${text}</a>`;
+        item.innerHTML = `<a target='_blank' href=${url}>${text}</a>`;
 
         return item;
 

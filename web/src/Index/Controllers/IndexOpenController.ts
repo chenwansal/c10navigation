@@ -8,6 +8,7 @@ export class IndexOpenController {
 
         let nav = AllRepo.NavWindow.Render();
         let site = AllRepo.SiteWindow.Render();
+        let footer = AllRepo.FooterWindow.Render();
 
     }
 

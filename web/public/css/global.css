@@ -7,6 +7,10 @@ a {
     color: #555;
 }
 
+i {
+    font-style: normal;
+}
+
 .title1 {
     font-size: 32px;
     font-weight: bold;
@@ -29,4 +33,24 @@ a {
     font-size: 20px;
     font-weight: bold;
     color: #333;
+}
+
+.title5 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Common UI */
+.section-title {
+    width: 100%;
+    margin: 10px 0;
+    border-bottom: 2px solid #333;
+}
+
+.section-title > i {
+    position: absolute;
+    margin-top: -12px;
+    margin-left: 20px;
+    background-color: #fff;
 }
