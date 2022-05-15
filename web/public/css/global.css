@@ -44,13 +44,15 @@ i {
 /* Common UI */
 .section-title {
     width: 100%;
-    margin: 10px 0;
+    display: block;
+    margin: 0;
     border-bottom: 2px solid #333;
 }
 
 .section-title > i {
     position: absolute;
     margin-top: -12px;
-    margin-left: 20px;
+    margin-left: 16px;
+    padding: 0 4px;
     background-color: #fff;
 }
