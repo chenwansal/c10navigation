@@ -15,11 +15,12 @@ for (let i = 0; i < process.argv.length; i++) {
 
 // Set Path
 const rootPath = resolve(__dirname, "../..");
-const staticPath = "/web";
+const viewPath = "/web/view"
+const staticPath = "/web/public";
 
 // Init Server
 const http: HttpServer = new HttpServer();
-http.InitHttpView(port, rootPath, staticPath, staticPath);
+http.InitHttpView(port, rootPath, viewPath, staticPath);
 
 // REST API
 http.GetListen("/", (req, res) => {
