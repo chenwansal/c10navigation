@@ -1,8 +1,8 @@
 {
-  "name": "navwebsite",
+  "name": "c10_navigation_server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dst/main_navwebsite.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc && node ./dst/main_navwebsite.js"

@@ -2,9 +2,12 @@ var path = require('path');
 
 module.exports = {
   mode: 'production', // 'development' 'production'
-  entry: './js/index.js',
+  entry: {
+    admin: './dst/Admin/Admin.js',
+    index: './dst/Index/Index.js',
+  }, 
   output: {
-    path: __dirname + '/js/out',
-    filename: 'bundle.js'
+    path: path.resolve(__dirname + '/js'),
+    filename: '[name].js'
   }
 };
