@@ -1,3 +1,5 @@
+import Global from "../Global/Global";
+
 /** 导航栏
  *      Logo
  */
@@ -17,7 +19,7 @@ export class NavWindow {
         // Create Root
         let root = document.createElement("div")
         root.id = this.name;
-        global.APP.appendChild(root);
+        Global.APP.appendChild(root);
         this.root = root;
 
         // Create Logo

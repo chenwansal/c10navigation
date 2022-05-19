@@ -1,3 +1,5 @@
+import Global from "../Global/Global";
+
 export class FooterWindow {
 
     name: string;
@@ -13,7 +15,7 @@ export class FooterWindow {
         let root = document.createElement("div");
         root.id = this.name;
         root.className += this.name;
-        global.APP.appendChild(root);
+        Global.APP.appendChild(root);
         this.root = root;
 
         // Create Beian
@@ -32,7 +34,7 @@ export class FooterWindow {
 
         // 备案信息
         let beian = document.createElement("a");
-        beian.innerText = "备案中";
+        beian.innerText = "闽ICP备2022007026号-1";
         beian.target = "_blank";
         beian.href = "https://beian.miit.gov.cn";
         info.appendChild(beian);

@@ -1,9 +1,10 @@
+import Global from "../Global/Global";
 import { IndexOpenController } from "./Controllers/IndexOpenController";
 import { AllRepo } from "./Repo/AllRepo";
 
 function Main() {
 
-    global.APP = document.getElementById("app");
+    Global.APP = document.getElementById("app");
 
     // ==== CTOR ====
     // Repo

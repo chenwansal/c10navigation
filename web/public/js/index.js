@@ -10,6 +10,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./dst/Global/Global.js":
+/*!******************************!*\
+  !*** ./dst/Global/Global.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.Global = void 0;\r\nexports.Global = {};\r\nexports[\"default\"] = exports.Global;\r\n\n\n//# sourceURL=webpack://c10_navigation_web/./dst/Global/Global.js?");
+
+/***/ }),
+
 /***/ "./dst/Index/Controllers/IndexOpenController.js":
 /*!******************************************************!*\
   !*** ./dst/Index/Controllers/IndexOpenController.js ***!
@@ -24,9 +34,9 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /*!****************************!*\
   !*** ./dst/Index/Index.js ***!
   \****************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nconst IndexOpenController_1 = __webpack_require__(/*! ./Controllers/IndexOpenController */ \"./dst/Index/Controllers/IndexOpenController.js\");\r\nconst AllRepo_1 = __webpack_require__(/*! ./Repo/AllRepo */ \"./dst/Index/Repo/AllRepo.js\");\r\nfunction Main() {\r\n    __webpack_require__.g.APP = document.getElementById(\"app\");\r\n    // ==== CTOR ====\r\n    // Repo\r\n    AllRepo_1.AllRepo.Ctor();\r\n    // Controller\r\n    let indexOpenController = new IndexOpenController_1.IndexOpenController();\r\n    // ==== INIT ====\r\n    indexOpenController.Init();\r\n    // ==== TICK ====\r\n    let tickInterval = setInterval(() => {\r\n    }, 2000);\r\n    // ==== ON TEAR DOWN ====\r\n    window.addEventListener(\"close\", () => {\r\n        clearInterval(tickInterval);\r\n    });\r\n    window.addEventListener(\"abort\", () => {\r\n        clearInterval(tickInterval);\r\n    });\r\n    console.log(\"Open Index\");\r\n}\r\nMain();\r\n\n\n//# sourceURL=webpack://c10_navigation_web/./dst/Index/Index.js?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nconst Global_1 = __importDefault(__webpack_require__(/*! ../Global/Global */ \"./dst/Global/Global.js\"));\r\nconst IndexOpenController_1 = __webpack_require__(/*! ./Controllers/IndexOpenController */ \"./dst/Index/Controllers/IndexOpenController.js\");\r\nconst AllRepo_1 = __webpack_require__(/*! ./Repo/AllRepo */ \"./dst/Index/Repo/AllRepo.js\");\r\nfunction Main() {\r\n    Global_1.default.APP = document.getElementById(\"app\");\r\n    // ==== CTOR ====\r\n    // Repo\r\n    AllRepo_1.AllRepo.Ctor();\r\n    // Controller\r\n    let indexOpenController = new IndexOpenController_1.IndexOpenController();\r\n    // ==== INIT ====\r\n    indexOpenController.Init();\r\n    // ==== TICK ====\r\n    let tickInterval = setInterval(() => {\r\n    }, 2000);\r\n    // ==== ON TEAR DOWN ====\r\n    window.addEventListener(\"close\", () => {\r\n        clearInterval(tickInterval);\r\n    });\r\n    window.addEventListener(\"abort\", () => {\r\n        clearInterval(tickInterval);\r\n    });\r\n    console.log(\"Open Index\");\r\n}\r\nMain();\r\n\n\n//# sourceURL=webpack://c10_navigation_web/./dst/Index/Index.js?");
 
 /***/ }),
 
@@ -54,9 +64,9 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /*!********************************!*\
   !*** ./dst/UI/FooterWindow.js ***!
   \********************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.FooterWindow = void 0;\r\nclass FooterWindow {\r\n    constructor() {\r\n        this.name = \"footer-window\";\r\n    }\r\n    Render() {\r\n        // Create Root\r\n        let root = document.createElement(\"div\");\r\n        root.id = this.name;\r\n        root.className += this.name;\r\n        __webpack_require__.g.APP.appendChild(root);\r\n        this.root = root;\r\n        // Create Beian\r\n        let beian = this.CreateInfo();\r\n        root.appendChild(beian);\r\n        // Create Author\r\n        let author = this.CreateAuthor();\r\n        root.appendChild(author);\r\n    }\r\n    CreateInfo() {\r\n        let info = document.createElement(\"div\");\r\n        // 备案信息\r\n        let beian = document.createElement(\"a\");\r\n        beian.innerText = \"备案中\";\r\n        beian.target = \"_blank\";\r\n        beian.href = \"https://beian.miit.gov.cn\";\r\n        info.appendChild(beian);\r\n        return info;\r\n    }\r\n    CreateAuthor() {\r\n        let info = document.createElement(\"div\");\r\n        // 作者信息\r\n        let author = document.createElement(\"i\");\r\n        author.innerText = \"作者: 杰克有茶\";\r\n        info.appendChild(author);\r\n        info.innerHTML += \"&nbsp; / &nbsp;\";\r\n        // 邮箱\r\n        let mail = document.createElement(\"a\");\r\n        mail.innerText = \"邮箱: chenwansal1@163.com\";\r\n        mail.target = \"_blank\";\r\n        mail.href = \"mailto: chenwansal1@163.com\";\r\n        info.appendChild(mail);\r\n        info.innerHTML += \"&nbsp; / &nbsp;\";\r\n        // 即刻\r\n        let jike = document.createElement(\"a\");\r\n        jike.innerText = \"即刻主页: @杰克有茶\";\r\n        jike.target = \"_blank\";\r\n        jike.href = \"https://web.okjike.com/u/C027E21D-DFD6-4F88-AF40-31871E1FB6F4\";\r\n        info.appendChild(jike);\r\n        return info;\r\n    }\r\n}\r\nexports.FooterWindow = FooterWindow;\r\n\n\n//# sourceURL=webpack://c10_navigation_web/./dst/UI/FooterWindow.js?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.FooterWindow = void 0;\r\nconst Global_1 = __importDefault(__webpack_require__(/*! ../Global/Global */ \"./dst/Global/Global.js\"));\r\nclass FooterWindow {\r\n    constructor() {\r\n        this.name = \"footer-window\";\r\n    }\r\n    Render() {\r\n        // Create Root\r\n        let root = document.createElement(\"div\");\r\n        root.id = this.name;\r\n        root.className += this.name;\r\n        Global_1.default.APP.appendChild(root);\r\n        this.root = root;\r\n        // Create Beian\r\n        let beian = this.CreateInfo();\r\n        root.appendChild(beian);\r\n        // Create Author\r\n        let author = this.CreateAuthor();\r\n        root.appendChild(author);\r\n    }\r\n    CreateInfo() {\r\n        let info = document.createElement(\"div\");\r\n        // 备案信息\r\n        let beian = document.createElement(\"a\");\r\n        beian.innerText = \"闽ICP备2022007026号-1\";\r\n        beian.target = \"_blank\";\r\n        beian.href = \"https://beian.miit.gov.cn\";\r\n        info.appendChild(beian);\r\n        return info;\r\n    }\r\n    CreateAuthor() {\r\n        let info = document.createElement(\"div\");\r\n        // 作者信息\r\n        let author = document.createElement(\"i\");\r\n        author.innerText = \"作者: 杰克有茶\";\r\n        info.appendChild(author);\r\n        info.innerHTML += \"&nbsp; / &nbsp;\";\r\n        // 邮箱\r\n        let mail = document.createElement(\"a\");\r\n        mail.innerText = \"邮箱: chenwansal1@163.com\";\r\n        mail.target = \"_blank\";\r\n        mail.href = \"mailto: chenwansal1@163.com\";\r\n        info.appendChild(mail);\r\n        info.innerHTML += \"&nbsp; / &nbsp;\";\r\n        // 即刻\r\n        let jike = document.createElement(\"a\");\r\n        jike.innerText = \"即刻主页: @杰克有茶\";\r\n        jike.target = \"_blank\";\r\n        jike.href = \"https://web.okjike.com/u/C027E21D-DFD6-4F88-AF40-31871E1FB6F4\";\r\n        info.appendChild(jike);\r\n        return info;\r\n    }\r\n}\r\nexports.FooterWindow = FooterWindow;\r\n\n\n//# sourceURL=webpack://c10_navigation_web/./dst/UI/FooterWindow.js?");
 
 /***/ }),
 
@@ -64,9 +74,9 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /*!*****************************!*\
   !*** ./dst/UI/NavWindow.js ***!
   \*****************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.NavWindow = void 0;\r\n/** 导航栏\r\n *      Logo\r\n */\r\nclass NavWindow {\r\n    constructor() {\r\n        this.name = \"nav-window\";\r\n    }\r\n    Render() {\r\n        // Create Root\r\n        let root = document.createElement(\"div\");\r\n        root.id = this.name;\r\n        __webpack_require__.g.APP.appendChild(root);\r\n        this.root = root;\r\n        // Create Logo\r\n        let logo = this.CreateLogo(\"/\");\r\n        root.appendChild(logo);\r\n        this.logo = logo;\r\n        // Add Items\r\n        let mainPageItem = this.AddNavItem(\"/\", \"主页\");\r\n        root.appendChild(mainPageItem);\r\n        // Append Root to APP\r\n        return this;\r\n    }\r\n    CreateLogo(url) {\r\n        let logo = document.createElement(\"div\");\r\n        logo.id = \"logo\";\r\n        logo.className += \"title3\";\r\n        logo.innerHTML = `<a href=${url}>C10 导航</a>`;\r\n        logo.title = \"收录C10爱逛的网站和一些工具\";\r\n        return logo;\r\n    }\r\n    AddNavItem(url, text) {\r\n        let item = document.createElement(\"div\");\r\n        item.innerHTML = `<a target='_blank' href=${url}>${text}</a>`;\r\n        return item;\r\n    }\r\n}\r\nexports.NavWindow = NavWindow;\r\n\n\n//# sourceURL=webpack://c10_navigation_web/./dst/UI/NavWindow.js?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.NavWindow = void 0;\r\nconst Global_1 = __importDefault(__webpack_require__(/*! ../Global/Global */ \"./dst/Global/Global.js\"));\r\n/** 导航栏\r\n *      Logo\r\n */\r\nclass NavWindow {\r\n    constructor() {\r\n        this.name = \"nav-window\";\r\n    }\r\n    Render() {\r\n        // Create Root\r\n        let root = document.createElement(\"div\");\r\n        root.id = this.name;\r\n        Global_1.default.APP.appendChild(root);\r\n        this.root = root;\r\n        // Create Logo\r\n        let logo = this.CreateLogo(\"/\");\r\n        root.appendChild(logo);\r\n        this.logo = logo;\r\n        // Add Items\r\n        let mainPageItem = this.AddNavItem(\"/\", \"主页\");\r\n        root.appendChild(mainPageItem);\r\n        // Append Root to APP\r\n        return this;\r\n    }\r\n    CreateLogo(url) {\r\n        let logo = document.createElement(\"div\");\r\n        logo.id = \"logo\";\r\n        logo.className += \"title3\";\r\n        logo.innerHTML = `<a href=${url}>C10 导航</a>`;\r\n        logo.title = \"收录C10爱逛的网站和一些工具\";\r\n        return logo;\r\n    }\r\n    AddNavItem(url, text) {\r\n        let item = document.createElement(\"div\");\r\n        item.innerHTML = `<a target='_blank' href=${url}>${text}</a>`;\r\n        return item;\r\n    }\r\n}\r\nexports.NavWindow = NavWindow;\r\n\n\n//# sourceURL=webpack://c10_navigation_web/./dst/UI/NavWindow.js?");
 
 /***/ }),
 
@@ -84,9 +94,9 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /*!*****************************************!*\
   !*** ./dst/UI/SiteWindow/SiteWindow.js ***!
   \*****************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.SiteWindow = void 0;\r\nconst CommonUI_1 = __webpack_require__(/*! ../Common/CommonUI */ \"./dst/UI/Common/CommonUI.js\");\r\nconst SiteGroupElement_1 = __webpack_require__(/*! ./SiteGroupElement */ \"./dst/UI/SiteWindow/SiteGroupElement.js\");\r\n/** 站点列表\r\n *      视频网站\r\n *      直播网站\r\n */\r\nclass SiteWindow {\r\n    constructor() {\r\n        this.name = \"site-window\";\r\n    }\r\n    Render() {\r\n        // Create Section\r\n        let section = CommonUI_1.CommonUI.CreateSectionTitle(\"网站列表\", __webpack_require__.g.APP);\r\n        // Create Root\r\n        let root = document.createElement(\"div\");\r\n        root.id = this.name;\r\n        root.className += this.name;\r\n        __webpack_require__.g.APP.appendChild(root);\r\n        this.root = root;\r\n        // Create Site Groups\r\n        let videoGroup = this.CreateSiteGroup(\"视频网站\");\r\n        videoGroup.AddSiteItem(\"https://v.qq.com\", \"腾讯视频\");\r\n        videoGroup.AddSiteItem(\"https://www.bilibili.com/\", \"哔哩哔哩\");\r\n        videoGroup.AddSiteItem(\"https://www.iqiyi.com/\", \"爱奇艺\");\r\n        videoGroup.AddSiteItem(\"https://www.youku.com/\", \"优酷\");\r\n        videoGroup.AddSiteItem(\"https://www.acfun.cn/\", \"AcFun\");\r\n        let liveGroup = this.CreateSiteGroup(\"直播网站\");\r\n        liveGroup.AddSiteItem(\"https://www.douyu.com/\", \"斗鱼\");\r\n        liveGroup.AddSiteItem(\"https://www.huya.com/\", \"虎牙\");\r\n        return this;\r\n    }\r\n    CreateSiteGroup(title) {\r\n        let siteGroup = new SiteGroupElement_1.SiteGroupElement();\r\n        siteGroup.Render(this.root, title);\r\n        return siteGroup;\r\n    }\r\n}\r\nexports.SiteWindow = SiteWindow;\r\n\n\n//# sourceURL=webpack://c10_navigation_web/./dst/UI/SiteWindow/SiteWindow.js?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.SiteWindow = void 0;\r\nconst Global_1 = __importDefault(__webpack_require__(/*! ../../Global/Global */ \"./dst/Global/Global.js\"));\r\nconst CommonUI_1 = __webpack_require__(/*! ../Common/CommonUI */ \"./dst/UI/Common/CommonUI.js\");\r\nconst SiteGroupElement_1 = __webpack_require__(/*! ./SiteGroupElement */ \"./dst/UI/SiteWindow/SiteGroupElement.js\");\r\n/** 站点列表\r\n *      视频网站\r\n *      直播网站\r\n */\r\nclass SiteWindow {\r\n    constructor() {\r\n        this.name = \"site-window\";\r\n    }\r\n    Render() {\r\n        // Create Section\r\n        let section = CommonUI_1.CommonUI.CreateSectionTitle(\"网站列表\", Global_1.default.APP);\r\n        // Create Root\r\n        let root = document.createElement(\"div\");\r\n        root.id = this.name;\r\n        root.className += this.name;\r\n        Global_1.default.APP.appendChild(root);\r\n        this.root = root;\r\n        // Create Site Groups\r\n        let videoGroup = this.CreateSiteGroup(\"视频网站\");\r\n        videoGroup.AddSiteItem(\"https://v.qq.com\", \"腾讯视频\");\r\n        videoGroup.AddSiteItem(\"https://www.bilibili.com/\", \"哔哩哔哩\");\r\n        videoGroup.AddSiteItem(\"https://www.iqiyi.com/\", \"爱奇艺\");\r\n        videoGroup.AddSiteItem(\"https://www.youku.com/\", \"优酷\");\r\n        videoGroup.AddSiteItem(\"https://www.acfun.cn/\", \"AcFun\");\r\n        let liveGroup = this.CreateSiteGroup(\"直播网站\");\r\n        liveGroup.AddSiteItem(\"https://www.douyu.com/\", \"斗鱼\");\r\n        liveGroup.AddSiteItem(\"https://www.huya.com/\", \"虎牙\");\r\n        return this;\r\n    }\r\n    CreateSiteGroup(title) {\r\n        let siteGroup = new SiteGroupElement_1.SiteGroupElement();\r\n        siteGroup.Render(this.root, title);\r\n        return siteGroup;\r\n    }\r\n}\r\nexports.SiteWindow = SiteWindow;\r\n\n\n//# sourceURL=webpack://c10_navigation_web/./dst/UI/SiteWindow/SiteWindow.js?");
 
 /***/ })
 
@@ -110,30 +120,17 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
-/************************************************************************/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
 /******/ 	var __webpack_exports__ = __webpack_require__("./dst/Index/Index.js");
 /******/ 	
 /******/ })()

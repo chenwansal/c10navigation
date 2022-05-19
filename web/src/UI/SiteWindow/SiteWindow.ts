@@ -1,3 +1,4 @@
+import Global from "../../Global/Global";
 import { CommonUI } from "../Common/CommonUI";
 import { SiteGroupElement } from "./SiteGroupElement";
 
@@ -17,13 +18,13 @@ export class SiteWindow {
     Render(): SiteWindow {
 
         // Create Section
-        let section = CommonUI.CreateSectionTitle("网站列表", global.APP);
+        let section = CommonUI.CreateSectionTitle("网站列表", Global.APP);
 
         // Create Root
         let root = document.createElement("div");
         root.id = this.name;
         root.className += this.name;
-        global.APP.appendChild(root);
+        Global.APP.appendChild(root);
         this.root = root;
 
         // Create Site Groups
