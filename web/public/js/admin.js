@@ -16,7 +16,7 @@
   \****************************/
 /***/ (() => {
 
-eval("\r\nfunction main_admin() {\r\n}\r\nmain_admin();\r\n\n\n//# sourceURL=webpack://c10_navigation_web/./dst/Admin/Admin.js?");
+eval("\nfunction main_admin() {\n}\nmain_admin();\n\n\n//# sourceURL=webpack://c10_navigation_web/./dst/Admin/Admin.js?");
 
 /***/ })
 
